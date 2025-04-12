@@ -19,11 +19,11 @@ class TaskAdapter(val context: Context, var list: ArrayList<DataModel.DataModelI
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.apply {
-            tvRepositoryname.text = list[position].name ?: "N/A"
-            tvProgramminglanguage.text = list[position].language ?: "N/A"
-            tvNumberStars.text = list[position].stargazers_count?.toString() ?: "N/A"
-            tvNumberForks.text = list[position].forks?.toString() ?: "N/A"
-            tvDescription.text = list[position].description ?: "N/A"
+            tvRepositoryname.text = "Repository Name: " + list[position].name ?: "N/A"
+            tvProgramminglanguage.text = " Programming language: " + list[position].language ?: "N/A"
+            tvNumberStars.text = "Number of stars: " + list[position].stargazers_count?.toString() ?: "N/A"
+            tvNumberForks.text = "Number of forks: " + list[position].forks?.toString() ?: "N/A"
+            tvDescription.text = "Description: " + list[position].description ?: "N/A"
         }
     }
 
